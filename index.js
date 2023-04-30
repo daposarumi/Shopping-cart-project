@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
-     databaseURL: "https://console.firebase.google.com/u/0/project/playground-10289/database/playground-10289-default-rtdb/data/~2F"
+     databaseURL: "https://playground-10289-default-rtdb.firebaseio.com/"
 }
 
 const app = initializeApp(appSettings)
@@ -18,10 +18,9 @@ const shoppingListEl = document.getElementById("shopping-list")
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
 
-    // push(shoppinglistInDB, inputValue)
+    push(shoppinglistInDB, inputValue)
 
 
-    console.log(inputValue)
-    // shoppingListEl.innerHTML += `<li>${inputValue}</li>`
+    shoppingListEl.innerHTML += `<li>${inputValue}</li>`
     
 })
