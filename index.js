@@ -8,11 +8,12 @@ const appSettings = {
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const shoppinglistInDB = ref(database, "shoppingList")
-const shoppingListEl = document.getElementById("shopping-list")
 
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
+const shoppingListEl = document.getElementById("shopping-list")
+
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
