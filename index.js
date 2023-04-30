@@ -23,5 +23,5 @@ addButtonEl.addEventListener("click", function() {
    
     
     shoppingListEl.innerHTML += `<li>${inputValue}</li>`
-    inputValue = ""
+    inputFieldEl.value = ""
 })
