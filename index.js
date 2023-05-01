@@ -29,7 +29,7 @@ addButtonEl.addEventListener("click", function() {
 })
 
 onValue(shoppinglistInDB, function(snapshot) {
-    let listArray = Object.value(snapshot.val())
+    let listArray = Object.values(snapshot.val())
 
     for (let i = 0; i < listArray.length; i++) {
        
