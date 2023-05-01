@@ -18,7 +18,7 @@ const shoppingListEl = document.getElementById("shopping-list")
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
 
-    inputValue = ""
+    inputFieldEl = ""
 
     push(shoppinglistInDB, inputValue)
 
