@@ -19,9 +19,10 @@ const shoppingListEl = document.getElementById("shopping-list")
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
 
-    inputValue = ""
+   
 
     push(shoppinglistInDB, inputValue)
+    inputValue = ""
 
     shoppingListEl.innerHTML += `<li>${inputValue}</li>`
     
