@@ -1,5 +1,5 @@
 export function clearInputValue() {
-    inputValue = ""
+    inputFieldEl.value = ""
 
 }
 
