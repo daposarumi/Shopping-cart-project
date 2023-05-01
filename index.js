@@ -33,6 +33,6 @@ onValue(shoppinglistInDB, function(snapshot) {
 
     for (let i = 0; i < listArray.length; i++) {
        
-        appendItemToShoppingList(listArray[i])
+        appendtoShoppingList(listArray[i])
     }
 })
