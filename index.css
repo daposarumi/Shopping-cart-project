@@ -8,9 +8,9 @@ html, body {
 .container {
     display: flex;
     flex-direction: column;
-    border: 2px solid #AC485A;
+    border: none;
     border-radius: 30px;
-    max-width: 250px;
+    max-width: 280px;
     margin: 0 auto;
     padding: 70px 30px 30px 40px;
 }
