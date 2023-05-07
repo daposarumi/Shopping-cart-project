@@ -36,11 +36,11 @@ onValue(shoppinglistInDB, function(snapshot) {
 
         let currentItem = shoppingListArray[i]
 
-        let currentItemID = currentItem[0]
+        // let currentItemID = currentItem[0]
 
-        let currentItemValue = currentItem[1]
+        // let currentItemValue = currentItem[1]
 
-        appendItemToshoppingListEl(currentItemValue)
+        appendItemToshoppingListEl(currentItem)
     }
 })
 
@@ -52,7 +52,17 @@ function clearInputFieldEl() {
     inputFieldEl.value = ""
 }
 
-function appendItemToshoppingListEl(itemValue) {
-    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+function appendItemToshoppingListEl(item) {
+
+    let itemID = item[0]
+    
+    let itemValue = item[1]
+   
+
+    let newEl = document.createElement("li")
+
+    newEl.textContent = itemValue
+
+    shoppingListEl.append(newEl)
 }
 
