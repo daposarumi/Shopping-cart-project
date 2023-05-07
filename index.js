@@ -36,11 +36,11 @@ onValue(shoppinglistInDB, function(snapshot) {
 
         let currentItem = shoppingListArray[i]
 
-        let currentItemID = Object.keys(snapshot(val))
+        let currentItemID = currentItem[0]
 
-        let currentItemValue = Object.value(snapshot(val))
+        let currentItemValue = currentItem[1]
 
-        appendItemToshoppingListEl(currentItemID)
+        appendItemToshoppingListEl(currentItemValue)
     }
 })
 
