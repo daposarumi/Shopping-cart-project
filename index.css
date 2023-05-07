@@ -10,7 +10,7 @@ html, body {
     flex-direction: column;
     border: 2px solid #AC485A;
     border-radius: 30px;
-    max-width: 300px;
+    max-width: 250px;
     margin: 0 auto;
     padding: 70px 30px 30px 40px;
 }
