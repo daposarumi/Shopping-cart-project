@@ -26,7 +26,7 @@ addButtonEl.addEventListener("click", function() {
     onValue(shoppinglistInDB, function(snapshot) {
         let listArray = Object.values(snapshot.val())
 
-        for (let i = 0; i < listArray.length; i++) {
+        // for (let i = 0; i < listArray.length; i++) {
             if (inputValue == listArray[i]) {
                 alert('Item is already in cart')
             }
