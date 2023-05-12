@@ -4,6 +4,8 @@ html, body {
     font-family: 'Rubik', sans-serif;
     background-color: antiquewhite;
     text-align: center;
+    user-select: none;
+    overflow: hidden;
 }
 .container {
     display: flex;
@@ -35,6 +37,10 @@ button {
     border-radius: 8px;
     font-size: 18px;
 }
+.button:hover {
+    background-color: #432000;
+    cursor:pointer;
+}
 .logo {
     width: 100px;
     height: auto;
@@ -56,4 +62,8 @@ ul li {
     flex-grow: 1;
     text-align: center;
     border-radius: 8px;
+}
+ul li:hover {
+    background-color: #FFEcc7;
+    cursor: pointer;
 }
