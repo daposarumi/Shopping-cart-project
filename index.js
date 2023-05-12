@@ -23,8 +23,11 @@ addButtonEl.addEventListener("click", function() {
     if (inputValue == "") {
         alert('null cannot be added to cart')
     }
+    for (let i = 0; i < shoppingListArray.length; i++)
+        if (inputValue == shoppingListArray[i]) {
+            alert('Item is already in cart')
+        }
     else {
-        
 
         push(shoppinglistInDB, inputValue)
 
@@ -80,6 +83,7 @@ function appendItemToshoppingListEl(item) {
     newEl.textContent = itemValue
 
     newEl.addEventListener("click", function() {
+
         let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
 
         remove(exactLocationOfItemInDB)
