@@ -17,13 +17,18 @@ const shoppingListEl = document.getElementById("shopping-list")
 
 
 addButtonEl.addEventListener("click", function() {
+    if (inputValue = '') {
+        alert('null cannot be added to cart')
+    }
+    else {
+        let inputValue = inputFieldEl.value
 
+        push(shoppinglistInDB, inputValue)
 
-    let inputValue = inputFieldEl.value
+        clearInputFieldEl()
+    }
 
-    push(shoppinglistInDB, inputValue)
-
-    clearInputFieldEl()
+    
     
 })
 
@@ -43,13 +48,8 @@ onValue(shoppinglistInDB, function(snapshot) {
 
             let currentItemValue = currentItem[1]
 
-            if (inputValue = '') {
-                alert("null cannot be added to cart")
-            }
-
-            else {
-                appendItemToshoppingListEl(currentItem)
-            }
+          
+            appendItemToshoppingListEl(currentItem)
  
         }
     } else {
