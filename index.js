@@ -20,16 +20,16 @@ addButtonEl.addEventListener("click", function() {
 
     let inputValue = inputFieldEl.value
 
-    if (inputValue == "") {
-        alert('null cannot be added to cart')
-    }
+    // if (inputValue == "") {
+    //     alert('null cannot be added to cart')
+    // }
 
-    else {
+    // else {
     
-        push(shoppinglistInDB, inputValue)
+    push(shoppinglistInDB, inputValue)
 
-        clearInputFieldEl()
-    }
+    clearInputFieldEl()
+    
     // onValue(shoppinglistInDB, function(snapshot) {
     //     let listArray = Object.values(snapshot.val())
 
