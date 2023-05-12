@@ -20,7 +20,7 @@ addButtonEl.addEventListener("click", function() {
 
     let inputValue = inputFieldEl.value
 
-    if (inputValue = '') {
+    if (inputValue = null) {
         alert('null cannot be added to cart')
     }
     else {
