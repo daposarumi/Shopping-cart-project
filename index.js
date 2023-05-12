@@ -20,20 +20,25 @@ addButtonEl.addEventListener("click", function() {
 
     let inputValue = inputFieldEl.value
 
-    // if (inputValue == "") {
-    //     alert('null cannot be added to cart')
-    // }
-    for (let i = 0; i < shoppingListInDB.length; i++) {
-        if (inputValue == shoppinglistInDB[i]) {
-            alert('Item is already in cart')
-        }
-        else {
-
-            push(shoppinglistInDB, inputValue)
-
-            clearInputFieldEl()
-        }
+    if (inputValue == "") {
+        alert('null cannot be added to cart')
     }
+    onValue(shoppinglistInDB, function(snapshot) {
+        let listArray = Object.values(snapshot.val())
+
+        for (let i = 0; i < listArray.length; i++) {
+            if (inputValue == listArray[i]) {
+                alert('Item is already in cart')
+            }
+            else {
+    
+                push(shoppinglistInDB, inputValue)
+    
+                clearInputFieldEl()
+            }
+        }
+    })
+    
     
 })
 
