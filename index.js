@@ -17,11 +17,14 @@ const shoppingListEl = document.getElementById("shopping-list")
 
 
 addButtonEl.addEventListener("click", function() {
-    if (inputFieldEl = '') {
+
+    let inputValue = inputFieldEl.value
+
+    if (inputValue = '') {
         alert('null cannot be added to cart')
     }
     else {
-        let inputValue = inputFieldEl.value
+        
 
         push(shoppinglistInDB, inputValue)
 
