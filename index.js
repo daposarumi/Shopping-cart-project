@@ -23,18 +23,17 @@ addButtonEl.addEventListener("click", function() {
     if (inputValue == "") {
         alert('null cannot be added to cart')
     }
-    for (let i = 0; i < shoppingListEl.length; i++)
+    for (let i = 0; i < shoppingListEl.length; i++) {
         if (inputValue == shoppingListEl[i]) {
             alert('Item is already in cart')
         }
-    else {
+        else {
 
-        push(shoppinglistInDB, inputValue)
+            push(shoppinglistInDB, inputValue)
 
-        clearInputFieldEl()
+            clearInputFieldEl()
+        }
     }
-
-    
     
 })
 
