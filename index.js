@@ -17,7 +17,7 @@ const shoppingListEl = document.getElementById("shopping-list")
 
 
 addButtonEl.addEventListener("click", function() {
-    if (inputValue = '') {
+    if (inputFieldEl = '') {
         alert('null cannot be added to cart')
     }
     else {
