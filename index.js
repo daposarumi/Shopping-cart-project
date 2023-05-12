@@ -43,7 +43,14 @@ onValue(shoppinglistInDB, function(snapshot) {
 
             let currentItemValue = currentItem[1]
 
-            appendItemToshoppingListEl(currentItem)
+            if (inputValue = '') {
+                alert("null cannot be added to cart")
+            }
+
+            else {
+                appendItemToshoppingListEl(currentItem)
+            }
+ 
         }
     } else {
         shoppingListEl.innerHTML = "No items here yet"
